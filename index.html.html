@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نادي القمة | احجز حصتك المجانية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* الألوان: غيّرها من هنا فقط وستتغير في كل الصفحة */
+  :root{
+    --ink:#16202A;      /* لون أرضية النادي الداكنة */
+    --chalk:#EEF0F2;    /* لون الطباشير للخلفية */
+    --tape:#F5C518;     /* شريط التحديد الأصفر */
+    --steel:#55616D;    /* رمادي للنصوص الثانوية */
+    --line:#C9CED4;
+  }
+  *{box-sizing:border-box;margin:0}
+  :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  body{font-family:"Tajawal",system-ui,sans-serif;background:var(--chalk);color:var(--ink);line-height:1.8;font-size:1.05rem}
+  h1,h2,.price{font-family:"Changa","Tajawal",sans-serif;line-height:1.2}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  section{padding:56px 0}
+  h2{font-size:clamp(1.6rem,5vw,2.3rem);margin-bottom:24px}
+
+  /* القسم الأول */
+  .hero{background:var(--ink);color:var(--chalk);padding:72px 0 64px;position:relative}
+  .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:14px;
+    background:repeating-linear-gradient(-45deg,var(--tape) 0 14px,var(--ink) 14px 28px)}
+  .hero h1{font-size:clamp(2.4rem,9vw,4.8rem);font-weight:800;max-width:14ch}
+  .hero p{max-width:34em;margin:20px 0 32px;color:#C7CED5}
+  .btn{display:inline-block;min-height:48px;padding:10px 28px;background:var(--tape);color:var(--ink);
+    font:700 1.1rem "Tajawal",sans-serif;border:0;border-radius:4px;cursor:pointer;text-decoration:none}
+  .btn:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  .hero .btn:focus-visible{outline-color:var(--chalk)}
+
+  /* البرامج */
+  .programs li{list-style:none;display:flex;gap:24px;justify-content:space-between;align-items:baseline;
+    padding:18px 0;border-top:2px solid var(--ink)}
+  .programs li:last-child{border-bottom:2px solid var(--ink)}
+  .programs strong{font:800 1.4rem "Changa",sans-serif;min-width:8em}
+  .programs span{color:var(--steel);flex:1}
+
+  /* الأسعار */
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .plan{border:2px solid var(--ink);padding:24px}
+  .plan.best{background:var(--ink);color:var(--chalk)}
+  .plan .price{font-size:2.2rem;font-weight:800}
+  .plan small{display:block;color:var(--steel)}
+  .plan.best small{color:#C7CED5}
+
+  /* المواعيد */
+  table{width:100%;border-collapse:collapse;max-width:520px}
+  td{padding:12px 0;border-bottom:1px solid var(--line)}
+  td:last-child{text-align:left;font-weight:700}
+
+  /* نموذج الحجز */
+  .book{background:#fff;border-top:14px solid var(--tape)}
+  form{display:grid;gap:16px;max-width:420px}
+  label{font-weight:700;display:grid;gap:6px}
+  input,select{font:inherit;min-height:48px;padding:8px 12px;border:2px solid var(--ink);border-radius:4px;background:var(--chalk)}
+  form .btn{background:var(--ink);color:var(--chalk)}
+  footer{padding:32px 0;color:var(--steel);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <!-- عدّل: العنوان الرئيسي -->
+    <h1>تمرّن بخطة تناسب جسمك وهدفك</h1>
+    <!-- عدّل: اسم المدينة -->
+    <p>نادي القمة في [اسم مدينتك]: مدرّبون معتمدون، معدات حديثة، وحصة تجريبية مجانية لكل عضو جديد.</p>
+    <a class="btn" href="#book">احجز حصتك المجانية</a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap">
+    <h2>برامج التدريب</h2>
+    <ul class="programs">
+      <li><strong>كمال الأجسام</strong><span>بناء العضلات وزيادة القوة ببرنامج أسبوعي مكتوب.</span></li>
+      <li><strong>لياقة وتخسيس</strong><span>حصص جماعية وتمارين قلب وأوزان لخسارة الدهون تدريجياً.</span></li>
+      <li><strong>تدريب شخصي</strong><span>مدرّب يتابع تمارينك وتقدّمك وحدك.</span></li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <h2>الاشتراكات</h2>
+    <!-- عدّل: الأسعار هنا أمثلة فقط -->
+    <div class="plans">
+      <div class="plan"><small>شهر واحد</small><div class="price">3000 دج</div></div>
+      <div class="plan best"><small>ثلاثة أشهر</small><div class="price">8000 دج</div></div>
+      <div class="plan"><small>سنة كاملة</small><div class="price">28000 دج</div></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>مواعيد العمل</h2>
+    <table>
+      <tr><td>السبت إلى الخميس</td><td>06:00 – 23:00</td></tr>
+      <tr><td>الجمعة</td><td>14:00 – 22:00</td></tr>
+    </table>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <h2>احجز حصتك المجانية</h2>
+      <form id="bookForm">
+        <label>الاسم <input name="name" required autocomplete="name"></label>
+        <label>هدفك
+          <select name="goal">
+            <option>بناء العضلات</option>
+            <option>خسارة الوزن</option>
+            <option>لياقة عامة</option>
+          </select>
+        </label>
+        <button class="btn" type="submit">أرسل طلبك عبر واتساب</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">العنوان: [اكتب عنوان النادي هنا]</footer>
+
+<script>
+  // عدّل: رقم واتساب النادي بالصيغة الدولية، بدون + ولا مسافات (مثال: 213550000000)
+  const PHONE = "213664760636";
+
+  document.getElementById("bookForm").addEventListener("submit", function (e) {
+    e.preventDefault();                       // نمنع إعادة تحميل الصفحة
+    const data = new FormData(e.target);      // نقرأ ما كتبه الزائر
+    const msg = "مرحباً، أنا " + data.get("name") +
+                ". هدفي: " + data.get("goal") +
+                ". أريد حجز الحصة التجريبية المجانية.";
+    if (PHONE.includes("X")) {                // الرقم ما زال مثالاً
+      alert("ضع رقم واتساب حقيقياً في المتغير PHONE داخل الكود أولاً.");
+      return;
+    }
+    // ننتقل إلى واتساب برسالة جاهزة
+    window.location.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
+  });
+</script>
+</body>
+</html>
